@@ -1,0 +1,93 @@
+<!-- Will do all the styling and JS in this single file. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calculator</title>
+   <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+   <!-- header is defined here -->
+   <header> 
+      <div class="heading">
+         <h1> Basic Calculator</h1>
+      </div>
+      
+    
+   </header>
+
+   <!-- Main Calculator is defined here -->
+   <main class="main-body">
+      <div class="calculator">
+         <div>  <!--Display screen of calculator-->
+            <input type="text" class="cal-display" readonly>
+            
+
+         </div>
+
+         <div class="cal-input">    <!--Input buttons of Calculator-->
+
+            <button type="button" onclick="displayValue =''; document.querySelector('.cal-display').value = displayValue;">C</button>
+
+            <button type="button" onclick=" displayValue+='1'; document.querySelector('.cal-display').value = displayValue;">1</button>
+
+            <button type="button" onclick=" displayValue+='2'; document.querySelector('.cal-display').value = displayValue;">2</button>
+
+            <button type="button" onclick=" displayValue+='+'; document.querySelector('.cal-display').value = displayValue;">+</button>
+
+            <button type="button" onclick=" displayValue+='3'; document.querySelector('.cal-display').value = displayValue;">3</button>
+
+            <button type="button" onclick=" displayValue+='4'; document.querySelector('.cal-display').value = displayValue;">4</button>
+
+            <button type="button" onclick=" displayValue+='-'; document.querySelector('.cal-display').value = displayValue;">-</button>
+
+            <button type="button" onclick=" displayValue+='5'; document.querySelector('.cal-display').value = displayValue;">5</button>
+
+            <button type="button" onclick=" displayValue+='6'; document.querySelector('.cal-display').value = displayValue;">6</button>
+
+            <button type="button" onclick=" displayValue+='*'; document.querySelector('.cal-display').value = displayValue;">*</button>
+
+            <button type="button" onclick=" displayValue+='7'; document.querySelector('.cal-display').value = displayValue;">7</button>
+
+            <button type="button" onclick=" displayValue+='8'; document.querySelector('.cal-display').value = displayValue;">8</button>
+
+            <button type="button" onclick=" displayValue+='/'; document.querySelector('.cal-display').value = displayValue;">/</button>
+
+            <!-- Final calculted value  -->
+
+            <!-- <button type="button" onclick=" let calculatedValue = eval(displayValue); displayValue = calculatedValue; document.querySelector('.cal-display').value = displayValue; ">=</button> -->
+            <!-- <button type="button" onclick=" let calculatedValue = eval(displayValue); document.querySelector('.cal-display').value = calculatedValue; ">=</button> -->
+
+            <button type="button" onclick=" displayValue = eval(displayValue); document.querySelector('.cal-display').value = displayValue; ">=</button>
+
+            <button type="button" onclick=" displayValue+='9'; document.querySelector('.cal-display').value = displayValue;">9</button>
+
+            <button type="button" onclick=" displayValue+='0'; document.querySelector('.cal-display').value = displayValue;">0</button>
+
+            <button type="button" onclick=" displayValue+='.'; document.querySelector('.cal-display').value = displayValue;">.</button>
+
+
+         </div>
+
+      </div>
+
+
+   </main>
+   
+   <!-- Footer (Copyrights) is defined here -->
+   <footer>
+
+
+   </footer>
+   
+
+   <!-- JS code is written here -->
+   <script>
+      let displayValue = '';
+      document.querySelector('.cal-display').value = displayValue;
+   </script>
+</body>
+</html>
